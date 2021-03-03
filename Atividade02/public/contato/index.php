@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <form name="meu_form">
+  <form name="meu_form" method="post">
 
     <h2>Formulario de Contato</h2>
 
@@ -53,7 +53,8 @@
           <td align="right">Mensagem</td>
           <td>
             <textarea id="mensagem" name="Mensagem"></textarea><br>
-            <input type="submit" class="enviar" onclick="Enviar();" value="Enviar" />
+
+            <input type="submit" class="enviar" value="ENVIAR">
           </td>
         </tr>
 
@@ -61,6 +62,21 @@
     </table>
 
   </form>
+
+  <div id="resultado">
+    <?php
+
+    if (isset($_POST)) {
+      $nome = isset($_POST['nome']) ? $_POST['nome'] : false;
+      $email = isset($_POST['email']) ? $_POST['email'] : false;
+      $assunto = isset($_POST['assunto']) ? $_POST['assunto'] : false;
+
+      echo '<h1>Nome:' . $nome . '</h1>';
+      echo '<h1>Email:' . $email . '</h1>';
+      echo '<h1>Assunto:' . $assunto . '</h1>';
+    }
+    ?>
+  </div>
 </body>
 
 </html>
