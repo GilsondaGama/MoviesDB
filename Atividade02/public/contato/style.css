@@ -7,7 +7,7 @@ form {
   font-family: Verdana,Tahoma,sans-serif;
   font-size: 12px;
   background-color: #176ca5;
-  max-width: 600px;
+  max-width: 525px;
 }
 
 h2 {
@@ -39,7 +39,8 @@ textarea {
 }
 
 form label {
-  margin-left: 14px;
+  margin-left: 0px;
+  padding-right: 30px;
   color: #FFFFFF; 
 }
 
@@ -56,4 +57,9 @@ td {
 
 tr {
   text-align: left;
+}
+
+input[type=radio] {
+    width: 15px;
+    height: 10px;
 }
